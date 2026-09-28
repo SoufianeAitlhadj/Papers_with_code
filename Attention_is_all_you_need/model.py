@@ -22,7 +22,7 @@ def causal_mask(T):
     return mask[tf.newaxis, tf.newaxis, :, :]  # (1, 1, T, T)
 
 
-# --- Multi-head attention ----------------------------------------------------
+#multi-head attention
 class MultiHeadAttention(tf.keras.layers.Layer):
     def __init__(self, d_model, n_heads, dropout):
         super().__init__()
